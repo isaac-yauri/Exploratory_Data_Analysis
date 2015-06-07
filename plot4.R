@@ -13,6 +13,7 @@ png(filename="plot4.png", width=480, height=480, units="px", pointsize=12, bg="w
 
 # Creating a 4 picture format
 par(mfcol=c(2,2))
+
 # First Picture
 plot(housepower$Global_active_power, ylab="Global Active Power", xaxt="n", xlab="", type="l")
 axis(1, at=c(1,1441,2880), labels=c("Thu","Fri","Sat"))
@@ -28,10 +29,10 @@ axis(1, at=c(1,1441,2880), labels=c("Thu","Fri","Sat"))
 plot(housepower$Voltage, ylab="Voltage", xaxt="n", xlab="datetime", type="l")
 axis(1, at=c(1,1441,2880), labels=c("Thu","Fri","Sat"))
 
-# Forth Picture
+# Fourth Picture
 plot(housepower$Global_reactive_power, ylab="Global_reactive_power", xaxt="n", xlab="datetime", type="l")
 axis(1, at=c(1,1441,2880), labels=c("Thu","Fri","Sat"))
 
-# Copy to PNG
+# Closing a PNG file
 dev.off ()
 
